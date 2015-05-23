@@ -1,12 +1,12 @@
 var app = angular.module('myapp', ['ngRoute', 'myapp.controllers']);
 
-app.congfig([$'routeProvider', function($routeProvider) {
+app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
-		.when('/', {templateUrl: 'partials/Index', controller: 'IndexController'})
+		.when('/', {templateUrl: 'partials/index', controller: 'IndexController'})
 		.otherwise({redirectTo:"/"})
 }])
 
-.congfig(['$locationProvider', function($locationProvider) {
+.config(['$locationProvider', function($locationProvider) {
 	$locationProvider.html5Mode(true);
 }]);
 
